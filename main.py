@@ -1,25 +1,18 @@
-# Define the function below to compute the determinant of a 2 by 2 matrix.
-def det2(matrix):
+# Define the function below to compute product of two matrices using rank 1 matrices.
+def multiplyR1(matrix1, matrix2):
     '''
-    Matrix takes a 2D list and computes the determinant before returning the value.
-    @param matrix: 2D list of numeric data
-    @return: float representing the determinant
+    Matrix takes a two 2D lists and computes the produt before returning the product matrix
+    as a 2D list. The product is computed using rank 1 matrices.
+    @param matrix1: 2D list of numeric data
+    @param matrix2: 2D list of numeric data
+    @return: 2D list representing the product matrix
     '''
-    pass    
-
-# Define the function below to compute the determinant of a 3 by 3 matrix
-def det3(matrix):
-    '''
-    Matrix takes a 2D list and computes the determinant before returning the value.
-    @param matrix: 2D list of numeric data
-    @return: float representing the determinant
-    '''
-    pass    
+    pass      
 
 def get_matrix():
     # Get rows and columns from user
-    rows = int(input("Enter the number of rows and columns: "))
-    columns = rows
+    rows = int(input("Enter the number of rows: "))
+    columns = int(input("Enter the number of columns: "))
 
     # Create empty list to store matrix values
     matrix = []
@@ -43,18 +36,12 @@ def main():
     '''
     Main function for the program.
     '''
-    matrix = get_matrix()
-    inverse = []
+    matrix1 = get_matrix()
+    matrix2 = get_matrix()
 
-    # Determine size
-    if len(matrix) == 2:
-        inverse = det2(matrix)
-    elif len(matrix) == 3:
-        inverse = det2(matrix)
-    else:
-        print("The matrix's determinant cannot be computed.")
+    product = multiplyR1(matrix1, matrix2)
 
-    print(inverse)
+    print(product)
 
 
 if __name__ == "__main__":
